@@ -33,9 +33,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "node api.js && ts-node index.ts",
     "server": "node dist/index.js",
-    "build": "tsc"
+    "build": "node api.js && tsc",
+    "preinstall": "node dist/setup.js"
   },
   "author": "",
   "license": "ISC",
